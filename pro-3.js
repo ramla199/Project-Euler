@@ -8,3 +8,33 @@
 
 
 // What is the largest prime factor of the number 600851475143
+function largestPrimeFactor(n) {
+  let largestPrime = 2;
+
+  for (let i = 2; i <= n; i++) {
+    // console.log("1")
+    // console.log(`the is n: ${n}`)
+    // console.log(`the is prime: ${largestPrime}`)
+    // console.log(`the is i: ${i}`)
+    while (n % i === 0) {
+    // console.log("2")
+    // console.log(`the is n2: ${n}`)
+    // console.log(`the is prime2: ${largestPrime}`)
+    // console.log(`the is i2: ${i}`)
+      largestPrime = i;
+      n /= i;
+    // console.log("3")
+    // console.log(`the is n3: ${n}`)
+    // console.log(`the is prime3: ${largestPrime}`)
+    // console.log(`the is i3: ${i}`)
+    }
+  }
+  console.log(largestPrime)
+  return largestPrime;
+}
+
+largestPrimeFactor(13195)
+largestPrimeFactor(600851475143)
+
+// console.log(45 % 2)
+// console.log(45 % 3)
